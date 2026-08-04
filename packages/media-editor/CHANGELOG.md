@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+### Bug Fixes
+
+-   Don't set initial focus on the crop area when the media editor modal opens, so focus stays on the dialog container.
+
 ## 0.14.0 (2026-07-14)
 
 ### Enhancements

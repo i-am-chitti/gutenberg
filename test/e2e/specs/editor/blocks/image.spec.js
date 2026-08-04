@@ -250,6 +250,15 @@ test.describe( 'Image', () => {
 		const modal = page.locator( 'role=dialog[name="Edit media"i]' );
 		await expect( modal ).toBeVisible();
 
+		// Initial focus stays on the dialog container. The modal offers
+		// several flows (crop, rotate, details), so no single control should
+		// claim focus — in particular not the crop area, which must not grab
+		// it once the image finishes loading either.
+		await expect(
+			modal.locator( '.media-editor-canvas__spinner' )
+		).toBeHidden();
+		await expect( modal ).toBeFocused();
+
 		// Rotate and save.
 		await modal
 			.locator( 'role=button[name="Rotate 90° clockwise"i]' )
