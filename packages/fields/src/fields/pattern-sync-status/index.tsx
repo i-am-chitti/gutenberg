@@ -17,7 +17,7 @@ const SYNC_STATUS_FILTERS = [
 		value: PATTERN_SYNC_TYPES.unsynced,
 		label: _x( 'Not synced', 'pattern (singular)' ),
 		description: __(
-			'Patterns that can be changed freely without affecting the site.'
+			'Patterns whose content can be edited per instance. Design and layout stay locked to the original unless the pattern is edited directly or detached.'
 		),
 	},
 ];
